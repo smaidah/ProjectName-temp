@@ -29,10 +29,10 @@ class App extends Component {
 
   async componentDidMount() {
     this.props.userAutoLoggedIn();
-    this.unsubscribeNetInfo = NetInfo.addEventListener(async state => {
+    this.unsubscribeNetInfo = NetInfo.addEventListener(async (state) => {
       await this.props.setIsConnected(state.isConnected);
       if (state.isConnected) {
-        console.log('connected');
+        console.log('connectedconnectedconnected');
       } else {
         console.log('no internet');
       }
